@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 function startConnection() {
   console.log();
-  const uri = "mongodb+srv://karan:mountbluemongo787@cluster0-4qqxf.mongodb.net/test?retryWrites=true&w=majority";
+  const uri = "fill-this";
   mongoose.connect(uri, { useNewUrlParser: true })
   // const client = new MongoClient(uri, { useNewUrlParser: true });
   // client.connect(err => {
