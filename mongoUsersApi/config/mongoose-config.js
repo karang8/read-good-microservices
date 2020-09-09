@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 
 function startConnection() {
   console.log();
+
   const uri = "ENTER URI HERE";
   mongoose.connect(uri, { useNewUrlParser: true })
   // const client = new MongoClient(uri, { useNewUrlParser: true });
