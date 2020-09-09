@@ -1,0 +1,67 @@
+{
+  "name": "06-karan-web-app-admin-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha --timeout 20000 --require babel-core/register --watch --reporter spec tests/unitTest --exec babel-node",
+    "coverage": "NODE_ENV=test nyc --reporter html --reporter text npm test",
+    "start": "NODE_ENV=development nodemon server.js --exec babel-node",
+    "lint": "eslint '**/*.*' --fix --ignore-pattern node_modules/ --ignore-pattern views/; exit 0;",
+    "lintw": "watch 'npm run lint'",
+    "migration": "node trysql2 $*",
+    "routetest": "NODE_ENV=test nyc mocha --timeout 20000 --require babel-core/register --watch --reporter spec tests/integTest/ --exec babel-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/aug-2019-js-nitesh/06-karan-web-app-admin-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/aug-2019-js-nitesh/06-karan-web-app-admin-project/issues"
+  },
+  "homepage": "https://gitlab.com/aug-2019-js-nitesh/06-karan-web-app-admin-project#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-node8": "^1.2.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "child-process": "^1.0.2",
+    "child-process-promise": "^2.2.1",
+    "connect-flash": "^0.1.1",
+    "cors": "^2.8.5",
+    "csurf": "^1.10.0",
+    "dotenv": "^8.0.0",
+    "ejs": "^2.6.2",
+    "execsql": "0.0.3",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "express-validator": "^6.0.1",
+    "mocha": "^6.1.4",
+    "mongoose": "^5.6.1",
+    "morgan": "^1.9.1",
+    "mysql": "^2.17.1",
+    "mysql2": "^1.6.5",
+    "nodemon": "^1.19.1",
+    "nyc": "^14.1.1",
+    "passport": "^0.4.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "supertest": "^4.0.2",
+    "typescript": "^3.5.2",
+    "watch": "^1.0.2",
+    "winston": "^3.2.1"
+  },
+  "babel": {
+    "presets": [
+      "node8"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.18.0"
+  }
+}
